@@ -1,7 +1,8 @@
-var emptyObject = {};
+// Basic Object
+let emptyObject = {};
 
 // One single object
-var oneUser = {
+let oneUser = {
     login : 'falken',
     password : 'josua'
 };
@@ -20,7 +21,10 @@ console.log(oneUser); // Object { login="root",  password="1234"}
 console.log('Other: ');
 console.log(otherUser); // Object { login="root",  password="1234"}
 
-var oneCustomer = {
+
+
+// JSON, arrays, brackets and quotations
+let oneCustomer = {
     name : 'John Doe',
     'Customer address' : 'c/ unknown',
     '-+-+-+' : 'wtf',
@@ -31,7 +35,8 @@ var oneCustomer = {
 };
 
 console.log(oneCustomer);
-
+// Accessing and modifying properties
+// Syntax:    var['key'] = 'value'
 oneCustomer['name'] = '';
 oneCustomer['-+-+-+'] = 'Something';
 oneCustomer.payment['ptype'] = 'Account';
@@ -40,25 +45,29 @@ oneCustomer['payment']['expiry date'] = 0;
 
 console.log(oneCustomer);
 
-var student = {
+
+
+// Methods as Properties
+
+let student = {
     id : 2,
     name : 'John Doe',
-    sayHello : function () {
+    sayHello : function () { // New anon function as a value (property)
         return 'Hello';
     }
 }
 console.log(student);
 console.log(student.sayHello()); // Hello
 
-...
+
 // Adding new properties and methods:
 student.age = 28;
 student.sayGoodbye = function () { return 'bye';};
 
 console.log(student.sayGoodbye())
 
-
-var invoice = {
+// 'this' keyword
+let invoice = {
     description : 'Sample invoice',
     price:100.0,
     vat: 5.0,
@@ -72,6 +81,9 @@ var invoice = {
 console.log(invoice);
 console.log(invoice.total());
 
+
+
+// Basic constructor
 function Web () {
     this.url = 'http://localhost';
     this.name = 'Localhost';
@@ -80,20 +92,24 @@ function Web () {
     }
 }
 
-var oneWeb = new Web();
+let oneWeb = new Web();
 oneWeb.url = 'http://www.pello.info';
 oneWeb.name = 'Home sweet home';
 
 console.log(oneWeb);
 console.log(oneWeb.showInfo());
 
-var otherWeb = new Web();
+let otherWeb = new Web();
 otherWeb.url = 'http://www.elmundo.es';
 otherWeb.name = 'El Mundo';
 
 console.log(otherWeb);
 console.log(otherWeb.showInfo())
 
+
+
+
+// Constructor with params
 function Web (url, name) {
     this.url = url;
     this.name = name;
