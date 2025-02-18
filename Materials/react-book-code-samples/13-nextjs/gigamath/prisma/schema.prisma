@@ -1,0 +1,88 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// schema
+// Notes:
+// To migrate the schema to a db:
+//    npx prisma db push
+// To run the administrator
+//    npx prisma studio
+// Before you access fron Next.js use
+//    npm install @prisma/client
+// Then run (and also Everytime you change the schema:)
+//    npx prisma db push
+//    npx prisma generate
+// Then restart the server!!
+
+model Exercise {
+  id        String     @default(cuid()) @id
+  type     String
+  content   String?
+  points    Int?
+  createdAt DateTime  @default(now()) @map(name: "created_at")
+  finishedAt DateTime @map(name: "finished_at")
+  user    User?   @relation(fields: [userId], references: [id])
+  userId  String?
+  @@unique(fields: [id, userId], name: "id_and_userId")
+}
+
+model User {
+  id            String   @default(cuid()) @id
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
+  exercises     Exercise[]
+  accounts      Account[]
+  sessions      Session[]
+  @@map(name: "users")
+}
+
+model Account {
+  id                 String  @id @default(cuid())
+  userId             String  @map("user_id")
+  type               String
+  provider           String
+  providerAccountId  String  @map("provider_account_id")
+  refresh_token      String?
+  access_token       String?
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String?
+  session_state      String?
+  oauth_token_secret String?
+  oauth_token        String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique @map("session_token")
+  userId       String   @map("user_id")
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  id         Int      @id @default(dbgenerated())
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}

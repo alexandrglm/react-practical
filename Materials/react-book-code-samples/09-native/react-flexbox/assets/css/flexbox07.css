@@ -1,0 +1,79 @@
+html, body {
+    font-family: Helvetica, Sans, Verdana;
+    font-size: 0.9em;
+    margin: 1em;
+    
+}
+
+header {
+    background-color: cornflowerblue;
+    margin-bottom: 2em;
+}
+
+div {
+    border: 1px solid gray;
+    padding: 0.2em;
+    background-color: white;
+}
+
+#container1,#container2,#container3,#container4, #container5 {
+    display: flex;
+    background-color: #ddd;
+    margin-bottom: 0.8em;
+}
+
+#container1,#container2,#container3,#container4 {
+    display: flex;
+    background-color: #ddd;
+    justify-content: center;
+    height: 200px;
+}
+
+#container1 #child1 {
+    /*align-self: auto | flex-start | flex-end | center | baseline | stretch;*/
+    align-self: auto;
+}
+
+#container1 #child2 {
+    align-self: auto;
+}
+
+#container1 #child3 {
+    align-self: auto;
+}
+
+#container2 #child1 {
+    align-self: flex-start;
+}
+
+#container2 #child2 {
+    align-self: center;
+}
+
+#container2 #child3 {
+    align-self: flex-end;
+}
+
+#container3 #child1 {
+    align-self: flex-end;
+}
+
+#container3 #child2 {
+    align-self: baseline;
+}
+
+#container3 #child3 {
+        align-self: stretch;
+}
+
+#container4 #child1 {
+        align-self: flex-end;
+}
+
+#container4 #child2 {
+        align-self: center;
+}
+
+#container4 #child3 {
+        align-self: stretch;
+}

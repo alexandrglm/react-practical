@@ -1,0 +1,28 @@
+
+
+.Forecast {
+  margin: 10px auto;
+  background-color: #282c34;
+  max-width: 400px;
+  height: 40px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+}
+
+.Forecast div {
+  background-color: white;
+  border-radius: 6px;
+  margin: .5em;
+  padding: .5em;
+  flex-grow: 2;
+}
+
+.Forecast .remove {
+  background-color: #282c34;
+  cursor: pointer;
+  flex-grow: 1;
+}

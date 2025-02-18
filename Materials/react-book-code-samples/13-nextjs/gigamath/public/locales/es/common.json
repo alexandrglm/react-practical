@@ -1,0 +1,26 @@
+{
+  "title": "Bienvenido a Giga Math",
+  "home": "Home",
+  "exercises": "ejercicios",
+  "profile": "Perfil",
+  "log_in": "Entrar",
+  "logout": "Salir",
+  "do_exercise": "¡Hacer ejercicios!",
+  "magnitude": "Magnitudes",
+  "time": "Tiempo",
+  "chicken": "Me achanto",
+  "again": "Rehacer",
+  "change_name": "Cambiar nombre",
+  "correct": "Corregir",
+  "exercise": {
+    "correct": "Correcto",
+    "again": "Repetir"
+  },
+  "completed_exercises": "Ejercicios completados: {{amount}}",
+  "exercises_and_average": "Ejercicios completados: {{amount}}, Promedio: {{average}}",
+  "about": {
+    "title": "Sobre GigaMath",
+    "subtitle": "¿Qué es GigaMath?",
+    "description": "Esto es una aplicación para practicar mates y registrar tu progreso."
+  }
+}

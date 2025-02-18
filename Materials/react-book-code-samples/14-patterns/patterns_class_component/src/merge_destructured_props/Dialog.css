@@ -1,0 +1,12 @@
+.default {
+    border: 1px solid lightgray;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    margin: 0.1em auto;
+    width: 80%;
+}
+
+.warning {
+    color: red;
+}
+

@@ -1,0 +1,45 @@
+html, body {
+    font-family: Helvetica, Sans, Verdana;
+    font-size: 0.9em;
+    margin: 1em;
+    
+}
+
+header {
+    background-color: cornflowerblue;
+    margin-bottom: 2em;
+}
+
+div {
+    border: 1px solid gray;
+    padding: 0.7em;
+    background-color: white;
+    margin-bottom: 0em;
+}
+
+#container1,#container2,#container3,#container4, #container5 {
+    display: flex;
+    background-color: #ddd;
+    height: 80px;
+    margin-bottom: 1em;
+}
+
+#container1 {
+    align-items: flex-start;
+}
+
+#container2 {
+    align-items: flex-end;
+}
+
+#container3 {
+    align-items: flex-center;
+}
+
+#container4 {
+    align-items: stretch;
+}
+
+#container5 {
+    align-items: baseline;
+}
