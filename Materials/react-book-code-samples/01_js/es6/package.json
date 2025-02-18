@@ -1,0 +1,14 @@
+{
+  "name": "es6-samples",
+  "version": "1.0.0",
+  "description": "ES6 samples",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "es6"
+  ],
+  "author": "Pello Altadill",
+  "license": "ISC"
+}

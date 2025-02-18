@@ -1,0 +1,15 @@
+html, body {
+    font-family: Helvetica, Sans, Verdana;
+    font-size: 0.9em;
+    margin: 0;
+    
+}
+
+header {
+    background-color: cornflowerblue;
+}
+
+ul {
+    list-style: none;
+    margin: 0.1em;
+}

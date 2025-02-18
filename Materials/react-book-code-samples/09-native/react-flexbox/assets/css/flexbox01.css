@@ -1,0 +1,40 @@
+html, body {
+    font-family: Helvetica, Sans, Verdana;
+    font-size: 0.9em;
+    margin: 0;
+    
+}
+
+header {
+    background-color: cornflowerblue;
+    margin-bottom: 2em;
+}
+
+div {
+    border: 1px solid gray;
+    padding: 1em;
+    background-color: white;
+    margin-bottom: 1em;
+}
+
+.container1 {
+    background-color: #ddd;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.container2 {
+    background-color: #ddd;
+    flex-wrap: wrap;    
+    flex-direction: row;
+}
+
+.container3 {
+    background-color: #ddd;
+    flex-wrap: wrap-reverse;    
+    flex-direction: row-reverse;
+}
+
+.child {
+    height: 4em;
+}
