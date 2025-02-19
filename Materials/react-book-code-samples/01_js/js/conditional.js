@@ -1,16 +1,20 @@
 var a = 5;
 var b = 4;
 
+// If
 if (a > b) {
     a = 0;
 }
 
+// If - Else
 if (a == b) {
     a = 1;
 } else {
     a = 34;
 }
 
+
+// If - Else If - Else
 if (a == b) {
     a = 1;
 } else if (a < b){
@@ -19,6 +23,8 @@ if (a == b) {
     a = b;
 }
 
+
+// Switch - Case 1
 switch (a) {
     case 4 : a=0;
         break;
@@ -30,20 +36,33 @@ switch (a) {
         break;
 }
 
+// Switch - Case 2
 switch (name) {
     case "gandalf":
-                    age = 1230;
-                    break;
+        age = 1230;
+        break;
     case "aragorn":
-                    age = 532;
-                    break;
+        age = 532;
+        break;
     case "frodo":
     case "sam":
-                    age = 34;
-                    break;
+        age = 34;
+        break;
     default:
-                    age -1;
-                    break;
+        age -1;
+        break;
 }
 
+
+// Ternary Operator (Elvis)
 var c = (a > b) ? a : b;
+/*
+This is equivalent to:
+
+```js
+if (a > b) {
+ c = a;
+} else {
+ c = b;
+}
+*/

@@ -1,3 +1,5 @@
+// Destructuring - Extracting values
+
 const names = ["Sam","Gimli","Frodo","Legolas","Pippin"];
 const [loyal, dwarf, hero, elf, naughty] = names;
 
